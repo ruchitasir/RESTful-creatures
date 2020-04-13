@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<ul>
+    <% dinoData.forEach(function(dino, index) { %>
+    <li>
+      <% console.log(index) %> 
+      <%= dino.name %> is a <%= dino.type %>
+    <form method="POST" action="/dinosaurs/<%=index  %>/?_method=DELETE">
+    <input type="submit" value = "Delete">
+    </form>
+    </li>
+    <% }); %>
+</ul>
+
+</body>
+</html>
+
